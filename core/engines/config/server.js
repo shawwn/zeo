@@ -5,7 +5,7 @@ const url = require('url');
 const mkdirp = require('mkdirp');
 const bodyParser = require('body-parser');
 const bodyParserJson = bodyParser.json();
-const zeoTerm = require('zeo-term')
+//const zeoTerm = require('zeo-term')
 
 const DEFAULT_SERVER_CONFIG = {
   name: 'VR Server',
@@ -119,7 +119,7 @@ class Config {
           app.put('/archae/config/config.json', serveConfigJsonSet);
 
           function serveTerm(req, res, next) {
-            zeoTerm.app(req, res, next);
+            //zeoTerm.app(req, res, next);
           }
           app.use('/term', serveTerm);
 
@@ -168,7 +168,7 @@ class Config {
               wallet.registerConnection(c);
               multiplayer.registerConnection(c);
             } else if (parsedUrl.pathname === '/term') {
-              zeoTerm.handleConnection(c);
+              //zeoTerm.handleConnection(c);
             }
           };
           wss.on('connection', _connection);
