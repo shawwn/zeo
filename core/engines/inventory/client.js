@@ -215,7 +215,7 @@ class Inventory {
         return Promise.resolve([]);
         /* return Promise.all(
           offlinePlugins.map(({name, version}) =>
-            fetch(`https://my-site.zeovr.io/mods/${name}`)
+            fetch(`http://next.niltree.com/mods/${name}`)
               .then(_resJson)
           )
         ); */
@@ -412,7 +412,7 @@ class Inventory {
                 const item = items[i];
                 const {name: itemName, ext, type = null, attributes = {}} = item;
 
-                fetch(`https://my-site.zeovr.io/img/mods/${modName}/${i}`)
+                fetch(`http://next.niltree.com/img/mods/${modName}/${i}`)
                   .then(_resArrayBuffer)
                   .then(arrayBuffer => base64.encode(arrayBuffer))
                   .then(icon => {
@@ -1065,7 +1065,7 @@ class Inventory {
         const _requestLocalProfilePicture = () => vridApi.get('name')
           .then(username => {
             if (username) {
-              return _requestImageBitmap(`https://my-site.zeovr.io/profile/picture/${username}`)
+              return _requestImageBitmap(`http://next.niltree.com/profile/picture/${username}`)
                 .catch(err => {
                   console.warn(err);
 
@@ -1075,7 +1075,7 @@ class Inventory {
               return Promise.resolve(null);
             }
           });
-        const _requestRemoteProfilePicture = username => _requestImageBitmap(`https://my-site.zeovr.io/profile/picture/${username}`)
+        const _requestRemoteProfilePicture = username => _requestImageBitmap(`http://next.niltree.com/profile/picture/${username}`)
           .catch(err => {
             console.warn(err);
 

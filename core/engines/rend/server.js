@@ -28,7 +28,7 @@ class Rend {
     let npmModSpecs = [];
     const _refreshNpmMods = () => new Promise((accept, reject) => {
       const proxyReq = https.get({
-        host: 'my-site.zeovr.io',
+        host: 'next.niltree.com',
         path: '/mods',
       }, proxyRes => {
         if (proxyRes.statusCode >= 200 && proxyRes.statusCode < 300) {

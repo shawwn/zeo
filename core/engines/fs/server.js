@@ -88,7 +88,7 @@ class Fs {
                 });
                 const proxyReq = https.request({
                   method: 'PUT',
-                  host: 'my-site.zeovr.io',
+                  host: 'next.niltree.com',
                   path: `/files/${id}`,
                 });
                 proxyReq.on('error', err => {

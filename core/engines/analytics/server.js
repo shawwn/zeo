@@ -43,7 +43,7 @@ class Analytics {
         const fileSpecs = [];
 
         const {port} = _parseUrlSpec(serverUrl);
-        const ws = new AutoWsClient(`wss://my-site.zeovr.io/analytics/ws?port=${port}`);
+        const ws = new AutoWsClient(`wss://next.niltree.com/analytics/ws?port=${port}`);
         let needsUpdate = true;
         ws.on('connect', () => {
           if (needsUpdate) {

@@ -563,7 +563,7 @@ class Fs {
           }
 
           getUrl() {
-            return `https://my-site.zeovr.io/files/${this.id}/${this.name}.${this.ext}`;
+            return `http://next.niltree.com/files/${this.id}/${this.name}.${this.ext}`;
           }
 
           write(d) {

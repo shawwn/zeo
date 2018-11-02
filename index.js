@@ -60,7 +60,7 @@ if (!flags.server && !flags.install && !flags.bundle) {
   flags.server = true;
 }
 
-const hostname = flags.host || 'zeovr.io';
+const hostname = flags.host || 'next.niltree.com';
 const port = flags.port || 8000;
 const secure = (typeof flags.secure === 'boolean') ? flags.secure : false;
 const dataDirectory = flags.dataDirectory || 'data';

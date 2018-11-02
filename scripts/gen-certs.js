@@ -6,7 +6,7 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const cryptoutils = require('cryptoutils');
 
-const hostname = 'zeovr.io';
+const hostname = 'niltree.com';
 const subjectAltNames = [
   '*.' + hostname,
   'hub.' + hostname,
